@@ -1781,7 +1781,7 @@ insertion using another hook."
   (if (and (eq action 'proof-done-advancing)
            (string-match coq-commands-accepting-as string))
       (with-no-warnings  ;; NB: dynamic scoping of `string'
-        (setq string (concat "infoH " string)))))
+        (setq string (concat "" string)))))
 
 (defun coq-auto-insert-as ()
   "This function is called whenever the `auto-insert-as' is set.
