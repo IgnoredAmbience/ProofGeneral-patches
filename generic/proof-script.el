@@ -1953,7 +1953,7 @@ comment, and insert or skip to the next semi)."
 	  (insert proof-terminal-string))
 	;; assert the region
 	(proof-assert-semis semis)
-	(proof-script-next-command-advance)))))
+	(proof-script-new-command-advance)))))
 
 (defun proof-assert-semis (semis &optional displayflags)
   "Add to the command queue the list SEMIS of command positions.
