@@ -4,7 +4,7 @@
 ;; License:     GPL (GNU GENERAL PUBLIC LICENSE)
 ;; Maintainer: Pierre Courtieu <Pierre.Courtieu@cnam.fr>
 
-;; coq-syntax.el,v 11.12 2012/07/24 09:27:16 pier Exp
+;; coq-syntax.el,v 11.13 2013/07/10 14:59:08 pier Exp
 
 (require 'proof-syntax)
 (require 'proof-utils)                  ; proof-locate-executable
@@ -467,6 +467,7 @@
     ("Instance goal" "instg" "Instance #:#.\n#\nDefined." t);; careful
     ("Lemma" "l" "Lemma # : #.\nProof.\n#\nQed." t "Lemma")
     ("Program Lemma" "pl" "Program Lemma # : #.\nProof.\n#\nQed." t "Program\\s-+Lemma")
+    ("Proposition" "l" "Proposition # : #.\nProof.\n#\nQed." t "Proposition")
     ("Module! (interactive)" nil "Module # : #.\n#\nEnd #." nil nil coq-insert-section-or-module)
     ("Module Type" "mti" "Module Type #.\n#\nEnd #." t "Module\\s-+Type") ; careful
     ("Module :" "moi" "Module # : #.\n#\nEnd #." t "Module") ; careful

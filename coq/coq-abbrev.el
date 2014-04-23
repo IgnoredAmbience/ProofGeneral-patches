@@ -75,6 +75,7 @@
   (coq-install-abbrevs))
 ;;;;;
 
+
 ;; The coq menu partly built from tables
 
 ;; Common part (scrit, response and goals buffers)
@@ -174,7 +175,10 @@
      ["Set Printing Coercions" coq-set-printing-coercions t]
      ["Unset Printing Coercions" coq-unset-printing-coercions t]
      ["Set Printing Wildcards" coq-set-printing-wildcards t]
-     ["Unset Printing Wildcards" coq-unset-printing-wildcards t])))
+     ["Unset Printing Wildcards" coq-unset-printing-wildcards t])
+    ""
+    ["ML4PG" (coq-activate-ml4pg) :help "Activates ML4PG: machine-learning methods for Proof General"]
+    ))
 
 (defpgdefault menu-entries
   (append coq-menu-common-entries
@@ -206,6 +210,10 @@
       :selected (and (boundp 'abbrev-mode) abbrev-mode)])
     ""
     ("COQ PROG (ARGS)"
+     ["Use project file" coq-toggle-use-project-file
+      :style toggle
+      :selected (and (boundp 'coq-use-project-file) coq-use-project-file)
+      ]
      ["Set Coq Prog *persistently*" coq-ask-insert-coq-prog-name t]
      ["help" coq-local-vars-list-show-doc t]
      ["Compile" coq-Compile t]))))

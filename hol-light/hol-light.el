@@ -5,7 +5,7 @@
 ;; Author: David Aspinall <David.Aspinall@ed.ac.uk>
 ;;         Mark Adams <mark@proof-technologies.com>
 ;;
-;; hol-light.el,v 12.19 2012/02/08 18:46:56 da Exp
+;; hol-light.el,v 12.20 2013/01/15 14:40:18 tews Exp
 ;;
 ;; See the README file in this directory for information.
 ;;
@@ -400,7 +400,7 @@ the currently open proof.")
  proof-tree-find-begin-of-unfinished-proof 
            'hol-light-find-begin-of-unfinished-proof
  ;; These ones belong in shell mode
- proof-tree-proof-finished-regexp "No subgoals"	  
+ proof-tree-branch-finished-regexp "No subgoals"	  
  proof-tree-show-sequent-command 
  (lambda (id) (format "print_xgoal_of_id \"%s\";;" id))
 
